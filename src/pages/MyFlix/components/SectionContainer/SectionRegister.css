@@ -1,0 +1,105 @@
+.div-register {
+  width: 40%;
+  height: 88%;
+  background-color: rgba(25, 25, 25, 0.9);
+  border: 1px solid red;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0px;
+  justify-content: center;
+  align-items: center;
+}
+.icon {
+  color: red;
+}
+.div-register h5 {
+  font-size: 30px;
+  color: aliceblue;
+  margin-block: 1rem 1rem;
+}
+
+.div-register .formulario-register {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0rem;
+}
+
+.div-register .formulario-register .div-envolvente {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 2px;
+  margin-block: 0.7rem;
+}
+.div-register .formulario-register .div-envolvente .p-alert {
+  margin-left: 40px;
+  font-size: 15px;
+  padding: 0;
+  text-align: left;
+  color: red;
+}
+
+.div-register .formulario-register label {
+  color: aliceblue;
+  margin-left: 40px;
+  text-align: left; /* Alinha o texto do label à esquerda */
+}
+
+.div-register .formulario-register input {
+  background: transparent;
+  outline: none;
+  width: 100%;
+
+  border-radius: 10px;
+  height: 40px;
+  color: aliceblue;
+  border: 1px solid red;
+  padding: 5px;
+}
+
+.div-register .formulario-register .div-input-and-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.div-register .formulario-register button {
+  background: rgba(0, 0, 0, 0.7);
+  outline: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+  color: aliceblue;
+  border: 1px solid red;
+  margin-top: 0.8rem;
+  cursor: pointer;
+}
+
+.div-register .formulario-register button:hover {
+  background: rgba(255, 16, 16, 0.5);
+  outline: none;
+  border-radius: 5px;
+  height: 40px;
+  color: aliceblue;
+  border: 1px solid red;
+}
+
+.div-register .login p {
+  color: aliceblue;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.div-register .formulario-register .login .p .a-no-p {
+  font-size: 14px;
+  margin-left: 5px;
+  color: rgb(0, 119, 255);
+  margin-bottom: 0.6rem;
+}

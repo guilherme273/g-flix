@@ -1,0 +1,204 @@
+.cards {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 0.25rem;
+  justify-content: flex-start;
+  width: 95%;
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
+.cards .div-icon-and-link-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: relative;
+}
+.cards .div-icon-and-link-img .icon {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  margin: 0px 20px 20px 0px;
+  cursor: pointer;
+  color: aliceblue;
+  background-color: #00000050;
+  padding: 5px;
+  border-radius: 10px;
+}
+.cards .div-icon-and-link-img .icon:hover {
+  background-color: transparent;
+  color: red;
+}
+
+.cards img {
+  width: 275px;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  margin: 0.5rem;
+  transition: transform 0.3s ease;
+}
+.cards img:hover {
+  transform: scale(1.1);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.buttons button {
+  background-color: transparent;
+  margin: none;
+  border: none;
+  cursor: pointer;
+  color: red;
+}
+.buttons button:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 412px) {
+  .cards {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 0.1rem;
+    justify-content: start;
+    width: 98%;
+  }
+
+  .cards::-webkit-scrollbar {
+    display: none;
+  }
+  .cards .div-icon-and-link-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+  }
+  .cards .div-icon-and-link-img .icon {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    margin: 0px 20px 20px 0px;
+    cursor: pointer;
+    color: aliceblue;
+    background-color: #00000050;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .cards .div-icon-and-link-img .icon:hover {
+    background-color: transparent;
+    color: red;
+  }
+
+  .cards img {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 0.1rem;
+    border-radius: 10px;
+    margin: 0.1rem;
+    transition: transform 0.3s ease;
+  }
+  .cards img:hover {
+    transform: scale(1.1);
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .buttons button {
+    background-color: transparent;
+    margin: none;
+    border: none;
+    cursor: pointer;
+    color: red;
+  }
+  .buttons button:hover {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 344px) {
+  .cards {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 0.1rem;
+    justify-content: start;
+    width: 98%;
+  }
+
+  .cards::-webkit-scrollbar {
+    display: none;
+  }
+  .cards .div-icon-and-link-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+  }
+  .cards .div-icon-and-link-img .icon {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    margin: 0px 20px 20px 0px;
+    cursor: pointer;
+    color: aliceblue;
+    background-color: #00000050;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .cards .div-icon-and-link-img .icon:hover {
+    background-color: transparent;
+    color: red;
+  }
+
+  .cards img {
+    width: 335px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 0.1rem;
+    border-radius: 10px;
+    margin: 0.1rem;
+    transition: transform 0.3s ease;
+  }
+  .cards img:hover {
+    transform: scale(1.1);
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .buttons button {
+    background-color: transparent;
+    margin: none;
+    border: none;
+    cursor: pointer;
+    color: red;
+  }
+  .buttons button:hover {
+    opacity: 0.5;
+  }
+}

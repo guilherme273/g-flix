@@ -1,0 +1,155 @@
+.header {
+  background-color: black;
+  border-bottom: 2px solid red;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  font-size: 1.5rem;
+  padding: 1rem 5rem 1rem 5rem;
+  align-items: center;
+  flex-direction: row;
+  justify-content: first baseline;
+  z-index: 2;
+}
+
+.header .link-logo {
+  color: red;
+  width: 35%;
+  text-decoration: none;
+}
+
+.header .link-logo .g {
+  font-size: 50px;
+  font-weight: bold;
+}
+.header nav {
+  width: 65%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.header .nav a {
+  color: aliceblue;
+  text-decoration: none;
+  padding-inline: 1rem;
+  margin-inline: 1rem;
+  font-size: 20px;
+}
+.header a:hover {
+  color: red;
+}
+.header a {
+  color: aliceblue;
+  text-decoration: none;
+  padding-inline: 1rem;
+  margin-inline: 1rem;
+  font-size: 20px;
+}
+
+@media (max-width: 412px) {
+  .header {
+    background-color: black;
+    border-bottom: 1px solid red;
+    width: 100%;
+    max-width: 412px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    padding: 1rem 0rem 1rem 0rem;
+    align-items: center;
+    flex-direction: row;
+    justify-content: first baseline;
+    z-index: 2;
+  }
+
+  .header .link-logo {
+    color: red;
+    width: 25%;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .header .link-logo .g {
+    font-size: 40px;
+    font-weight: bold;
+    padding: 0;
+
+    margin: 0;
+  }
+  .header nav {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: first baseline;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+  }
+
+  .header .nav a {
+    color: aliceblue;
+    text-decoration: none;
+    padding-inline: 0.2rem;
+    margin-inline: 0.2rem;
+    font-size: 20px;
+    margin-bottom: 0.4;
+  }
+  .header a:hover {
+    color: red;
+  }
+}
+
+@media (max-width: 344px) {
+  .header {
+    background-color: black;
+    border-bottom: 1px solid red;
+    width: 100%;
+    max-width: 344px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    padding: 1rem 0rem 1rem 0rem;
+    align-items: center;
+    flex-direction: row;
+    justify-content: first baseline;
+    z-index: 2;
+  }
+
+  .header .link-logo {
+    color: red;
+    width: 25%;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .header .link-logo .g {
+    font-size: 35px;
+    font-weight: bold;
+    padding: 0;
+
+    margin: 0;
+  }
+  .header nav {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: first baseline;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+  }
+
+  .header .nav a {
+    color: aliceblue;
+    text-decoration: none;
+    padding-inline: 0.2rem;
+    margin-inline: 0.2rem;
+    font-size: 20px;
+    margin-bottom: 0.4;
+  }
+  .header a:hover {
+    color: red;
+  }
+}

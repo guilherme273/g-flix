@@ -1,0 +1,11 @@
+.container-video {
+  width: 100%;
+  height: auto;
+  background-color: #191919;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 9rem;
+}

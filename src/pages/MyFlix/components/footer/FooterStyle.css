@@ -1,0 +1,39 @@
+.footer {
+  background-color: black;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-top: solid 2px red;
+  color: aliceblue;
+}
+
+.footer h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: aliceblue;
+}
+
+@media (max-width: 344px) {
+  .footer {
+    background-color: black;
+    width: 100%;
+    max-width: 344px;
+    bottom: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-top: solid 2px red;
+    color: aliceblue;
+  }
+
+  .footer h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: aliceblue;
+  }
+}

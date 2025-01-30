@@ -1,0 +1,6 @@
+.container-video .div-video {
+  padding: 0;
+}
+.container-video .div-video iframe {
+  border-radius: 20px;
+}
