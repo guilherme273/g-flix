@@ -7,9 +7,12 @@ export const Likes = ({ children }) => {
   const [likes, setLikes] = useState([]);
   const { getUser } = useAuthenticator();
   const takeLikes = async (id_user) => {
-    const response = await fetch(`http://54.226.91.49/like?iduser=${id_user}`, {
-      method: "GET",
-    });
+    const response = await fetch(
+      `https://54.226.91.49/like?iduser=${id_user}`,
+      {
+        method: "GET",
+      }
+    );
 
     if (response.ok) {
       return response.json();
