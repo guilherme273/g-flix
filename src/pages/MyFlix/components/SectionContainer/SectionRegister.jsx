@@ -22,7 +22,7 @@ function SectionRegister() {
   const makeRequest = async (data) => {
     const json = JSON.stringify(data);
 
-    const response = await fetch("http://54.226.91.49/register", {
+    const response = await fetch("https://54.226.91.49/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json", // Adiciona o cabeçalho Content-Type

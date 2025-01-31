@@ -33,7 +33,7 @@ export const Likes = ({ children }) => {
       id_user: id_user,
     };
     const json = JSON.stringify(jsonOBJ);
-    const response = await fetch("http://54.226.91.49/like", {
+    const response = await fetch("https://54.226.91.49/like", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -55,7 +55,7 @@ export const Likes = ({ children }) => {
       id_user: id_user,
     };
     const json = JSON.stringify(jsonOBJ);
-    const response = await fetch("http://54.226.91.49/like", {
+    const response = await fetch("https://54.226.91.49/like", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
