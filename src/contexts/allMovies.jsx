@@ -8,7 +8,7 @@ export const Movies = ({ children }) => {
   useEffect(() => {
     const getMovies = async () => {
       try {
-        const response = await fetch("http://54.226.91.49/get-all-movies", {
+        const response = await fetch("https://54.226.91.49/get-all-movies", {
           method: "GET",
         });
         if (response.ok) {
