@@ -2,7 +2,7 @@ import SectionLogin from "../MyFlix/components/SectionLogin/SectionLogin";
 import "./LoginStyle.css";
 function Login() {
   const img = {
-    backgroundImage: "url('/public/img/login.jpg')",
+    backgroundImage: "url('/public/assets/img/login.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "100vh",
