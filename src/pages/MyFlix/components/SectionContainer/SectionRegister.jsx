@@ -5,6 +5,7 @@ import { Link, Navigate } from "react-router-dom";
 import Alert from "../alert/Alert";
 import { useState } from "react";
 import Alert2 from "../alert2/Alert2";
+import { useAuthenticator } from "../../../../contexts/login";
 
 function SectionRegister() {
   const {
@@ -16,13 +17,13 @@ function SectionRegister() {
   } = useForm();
   const [msg, setMSG] = useState(null);
   const [alerIsopen, setalertIsopen] = useState(false);
-  const [isSuccess, setisSuccess] = useState(false);
   const [cadastrado, setcadastrado] = useState(false);
+  const { isSuccess, setisSuccess } = useAuthenticator();
 
   const makeRequest = async (data) => {
     const json = JSON.stringify(data);
 
-    const response = await fetch("https://54.226.91.49/register", {
+    const response = await fetch("http://54.226.91.49/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json", // Adiciona o cabeçalho Content-Type

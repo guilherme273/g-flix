@@ -5,12 +5,13 @@ const AuthenticatorContext = createContext();
 export const Authenticator = ({ children }) => {
   const [User, setUser] = useState();
   const [logado, setLogado] = useState(false);
+  const [isSuccess, setisSuccess] = useState(false);
 
   const logar = async ({ e_mail, password }) => {
     const data = { e_mail, password };
     const json = JSON.stringify(data);
 
-    const response = await fetch("https://54.226.91.49/login", {
+    const response = await fetch("http://54.226.91.49/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -66,7 +67,16 @@ export const Authenticator = ({ children }) => {
 
   return (
     <AuthenticatorContext.Provider
-      value={{ logar, User, getAuthHeaders, logado, getUser, deslogar }}
+      value={{
+        logar,
+        User,
+        getAuthHeaders,
+        logado,
+        getUser,
+        deslogar,
+        setisSuccess,
+        isSuccess,
+      }}
     >
       {children}
     </AuthenticatorContext.Provider>

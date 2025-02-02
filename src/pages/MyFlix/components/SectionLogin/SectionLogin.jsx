@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { useAuthenticator } from "../../../../contexts/login";
 import Alert from "../alert/Alert";
 import { useState } from "react";
+import Alert2 from "../alert2/Alert2";
 
 function SectionLogin() {
   const {
@@ -12,7 +13,7 @@ function SectionLogin() {
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const { logar, logado } = useAuthenticator();
+  const { logar, logado, isSuccess, setisSuccess } = useAuthenticator();
   const [error, setError] = useState(null);
   const [alerIsopen, setalertIsopen] = useState(false);
 
@@ -87,6 +88,7 @@ function SectionLogin() {
             err={() => setError(null)}
           />
         )}
+        {isSuccess && <Alert2 fechar={() => setisSuccess(false)} />}
       </>
     );
   }
