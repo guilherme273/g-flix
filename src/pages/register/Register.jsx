@@ -2,7 +2,7 @@ import SectionRegister from "../MyFlix/components/SectionContainer/SectionRegist
 import "./Register.css";
 function Register() {
   const img = {
-    backgroundImage: "url('/public/img/login.jpg')",
+    backgroundImage: "url('/img/login.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     height: "100vh",

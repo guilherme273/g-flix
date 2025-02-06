@@ -19,7 +19,7 @@ function Banner({ allMovies, setMoviesSearch }) {
     <section className="section-banner">
       <div className="div-input-pesquisa">
         <span className="g">
-          <img src="/public/img/logo.png" alt="" />
+          <img src="/img/logo.png" alt="" />
         </span>
         <input
           type="text"
