@@ -4,5 +4,12 @@
       "NODE_VERSION": "18"
     }
   },
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
+

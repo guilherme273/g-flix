@@ -9,7 +9,7 @@ function Alert2({ fechar }) {
     <section className="section-alert2">
       <div className="alert">
         <button onClick={close} className="close">
-          <CircleX className="p" color="white" size={25} />
+          <CircleX className="p" size={25} />
         </button>
         <CircleAlert className="icon-alert" color="green" size={100} />
         <div className="alert-content">

@@ -65,6 +65,15 @@ export const Authenticator = ({ children }) => {
     x();
   }, []);
 
+  
+  useEffect(() => {
+
+      setTimeout(() => {
+        setisSuccess(false);
+      }, 3000);
+
+  }, isSuccess);
+
   return (
     <AuthenticatorContext.Provider
       value={{

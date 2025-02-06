@@ -1,5 +1,8 @@
 import SectionRegister from "../MyFlix/components/SectionContainer/SectionRegister";
 import "./Register.css";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+
 function Register() {
   const img = {
     backgroundImage: "url('/img/login.jpg')",
@@ -11,6 +14,7 @@ function Register() {
     <>
       <div className="all-body" style={img}>
         <SectionRegister />
+        <ToastContainer />
       </div>
     </>
   );

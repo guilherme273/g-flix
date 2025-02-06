@@ -21,7 +21,11 @@
   border: 1px solid green;
 }
 .section-alert2 .alert .icon-alert {
-  margin-top: 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin-top: 15px;
+}
+.section-alert2 .alert:hover .icon-alert {
+  transform: scale(1.2);
 }
 .section-alert2 .alert .close {
   border: none;
@@ -41,6 +45,10 @@
   background-color: transparent;
   margin: 0;
   padding: 0;
+  color:aliceblue;
+}
+.section-alert2 .alert .close .p:hover {
+color: green;
 }
 .section-alert2 .alert .alert-content {
   height: 75%;

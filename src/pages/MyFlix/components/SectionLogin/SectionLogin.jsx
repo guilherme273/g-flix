@@ -3,27 +3,62 @@ import "./SectionLoginStyle.css";
 import { Link, Navigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useAuthenticator } from "../../../../contexts/login";
-import Alert from "../alert/Alert";
-import { useState } from "react";
-import Alert2 from "../alert2/Alert2";
+
+import {useEffect, useState } from "react";
+
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function SectionLogin() {
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+
   const { logar, logado, isSuccess, setisSuccess } = useAuthenticator();
   const [error, setError] = useState(null);
-  const [alerIsopen, setalertIsopen] = useState(false);
+
 
   const makeRequest = async (data) => {
     const msg = await logar(data);
     setError(msg);
     if (error) {
-      setalertIsopen(true);
+      toast(error, {
+        autoClose: 5000, // Duração do toast (5 segundos)
+        hideProgressBar: true, // Mostrar barra de progresso
+        closeButton: true, // Mostrar botão de fechar
+        pauseOnHover: true, // Pausar o tempo quando o mouse estiver sobre o toast
+        style: {
+          backgroundColor: "#dc3545", // Cor de fundo vermelha (para erro)
+          color: "white", // Cor do texto
+          fontWeight: "bold", // Texto em negrito
+        },
+      });
     }
   };
+
+useEffect(()=>{
+
+if(isSuccess)
+{
+  toast('Cadastro Realizado Com Sucesso!', {
+    autoClose: 5000, // Duração do toast (5 segundos)
+    hideProgressBar: true, // Mostrar barra de progresso
+    closeButton: true, // Mostrar botão de fechar
+    pauseOnHover: true, // Pausar o tempo quando o mouse estiver sobre o toast
+    style: {
+      backgroundColor: "#28a745", // Cor de fundo verde 
+      color: "white", // Cor do texto
+      fontWeight: "bold", // Texto em negrito
+    },
+  });
+}
+
+})
+
 
   if (logado) {
     return <Navigate to="/" />;
@@ -81,14 +116,7 @@ function SectionLogin() {
             </p>
           </div>
         </div>
-        {alerIsopen && (
-          <Alert
-            msg={error}
-            fechar={() => setalertIsopen(false)}
-            err={() => setError(null)}
-          />
-        )}
-        {isSuccess && <Alert2 fechar={() => setisSuccess(false)} />}
+     
       </>
     );
   }

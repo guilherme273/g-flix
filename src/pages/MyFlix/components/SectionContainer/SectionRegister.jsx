@@ -2,10 +2,12 @@ import { AtSign, Lock, LockKeyhole, User } from "lucide-react";
 import { useForm } from "react-hook-form";
 import "./SectionRegister.css";
 import { Link, Navigate } from "react-router-dom";
-import Alert from "../alert/Alert";
+
 import { useState } from "react";
-import Alert2 from "../alert2/Alert2";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useAuthenticator } from "../../../../contexts/login";
+
 
 function SectionRegister() {
   const {
@@ -15,10 +17,11 @@ function SectionRegister() {
     watch,
     reset,
   } = useForm();
-  const [msg, setMSG] = useState(null);
-  const [alerIsopen, setalertIsopen] = useState(false);
+
   const [cadastrado, setcadastrado] = useState(false);
   const { isSuccess, setisSuccess } = useAuthenticator();
+
+
 
   const makeRequest = async (data) => {
     const json = JSON.stringify(data);
@@ -32,21 +35,29 @@ function SectionRegister() {
     });
 
     if (response.ok) {
-      setisSuccess(true);
-      setcadastrado(true);
+      
+      setisSuccess(true)
+      setcadastrado(true)
       reset();
     } else {
       const errorData = await response.json();
 
-      setMSG(errorData.msg);
-      if (errorData) {
-        setalertIsopen(true);
-      }
+      toast(errorData.msg, {
+        autoClose: 5000, // Duração do toast (5 segundos)
+        hideProgressBar: true, // Mostrar barra de progresso
+        closeButton: true, // Mostrar botão de fechar
+        pauseOnHover: true, // Pausar o tempo quando o mouse estiver sobre o toast
+        style: {
+          backgroundColor: "#dc3545", // Cor de fundo vermelha (para erro)
+          color: "white", // Cor do texto
+          fontWeight: "bold", // Texto em negrito
+        },
+      });
     }
   };
   const matchPassword = watch("password");
   if (cadastrado) {
-    return <Navigate to="/login" />;
+    return <Navigate to="/login"  />;
   } else {
     return (
       <>
@@ -145,14 +156,8 @@ function SectionRegister() {
             </div>
           </form>
         </div>
-        {alerIsopen && (
-          <Alert
-            msg={msg}
-            fechar={() => setalertIsopen(false)}
-            err={() => setMSG(null)}
-          />
-        )}
-        {isSuccess && <Alert2 fechar={() => setisSuccess(false)} />}
+  
+        
       </>
     );
   }
