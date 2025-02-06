@@ -8,9 +8,12 @@ export const Movies = ({ children }) => {
   useEffect(() => {
     const getMovies = async () => {
       try {
-        const response = await fetch("http://54.226.91.49/get-all-movies", {
-          method: "GET",
-        });
+        const response = await fetch(
+          "https://mybackend.eco.br/get-all-movies",
+          {
+            method: "GET",
+          }
+        );
         if (response.ok) {
           const data = await response.json();
 

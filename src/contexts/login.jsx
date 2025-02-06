@@ -11,7 +11,7 @@ export const Authenticator = ({ children }) => {
     const data = { e_mail, password };
     const json = JSON.stringify(data);
 
-    const response = await fetch("http://54.226.91.49/login", {
+    const response = await fetch("https://mybackend.eco.br/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
