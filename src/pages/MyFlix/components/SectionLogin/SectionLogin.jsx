@@ -18,7 +18,7 @@ function SectionLogin() {
   } = useForm();
 
 
-  const { logar, logado, isSuccess, setisSuccess } = useAuthenticator();
+  const { logar, logado, isSuccess, setisSuccess, setisSuccessType, isSuccessType } = useAuthenticator();
   const [error, setError] = useState(null);
 
 
@@ -42,9 +42,9 @@ function SectionLogin() {
 
 useEffect(()=>{
 
-if(isSuccess)
+if(isSuccess && isSuccessType ==='cadastrado')
 {
-  toast('Cadastro Realizado Com Sucesso!', {
+  toast('cadastro realizado com sucesso', {
     autoClose: 5000, // Duração do toast (5 segundos)
     hideProgressBar: true, // Mostrar barra de progresso
     closeButton: true, // Mostrar botão de fechar
@@ -57,7 +57,7 @@ if(isSuccess)
   });
 }
 
-})
+},isSuccess)
 
 
   if (logado) {

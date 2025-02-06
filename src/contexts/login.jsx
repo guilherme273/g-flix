@@ -6,6 +6,7 @@ export const Authenticator = ({ children }) => {
   const [User, setUser] = useState();
   const [logado, setLogado] = useState(false);
   const [isSuccess, setisSuccess] = useState(false);
+  const [isSuccessType, setisSuccessType] = useState('');
 
   const logar = async ({ e_mail, password }) => {
     const data = { e_mail, password };
@@ -24,6 +25,9 @@ export const Authenticator = ({ children }) => {
     } else {
       const UserToken = await response.json();
       setUser(UserToken.user);
+      setisSuccess(true);
+      setisSuccessType('logado');
+      
       setLogado(true);
       localStorage.setItem("@auth:", UserToken.token);
       localStorage.setItem("@user:", JSON.stringify(UserToken.user));
@@ -65,14 +69,15 @@ export const Authenticator = ({ children }) => {
     x();
   }, []);
 
-  
+
   useEffect(() => {
 
       setTimeout(() => {
         setisSuccess(false);
+        setisSuccessType('');
       }, 3000);
 
-  }, isSuccess);
+  }, [isSuccess]);
 
   return (
     <AuthenticatorContext.Provider
@@ -85,6 +90,8 @@ export const Authenticator = ({ children }) => {
         deslogar,
         setisSuccess,
         isSuccess,
+        setisSuccessType,
+        isSuccessType
       }}
     >
       {children}

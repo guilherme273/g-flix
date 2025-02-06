@@ -19,7 +19,8 @@ function SectionRegister() {
   } = useForm();
 
   const [cadastrado, setcadastrado] = useState(false);
-  const { isSuccess, setisSuccess } = useAuthenticator();
+  const {isSuccess, setisSuccess, setisSuccessType} = useAuthenticator();
+
 
 
 
@@ -35,8 +36,8 @@ function SectionRegister() {
     });
 
     if (response.ok) {
-      
       setisSuccess(true)
+      setisSuccessType('cadastrado')
       setcadastrado(true)
       reset();
     } else {
