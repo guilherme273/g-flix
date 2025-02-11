@@ -19,7 +19,7 @@ function Header({ allMovies }) {
         <Link state={{ allMovies: allMovies }} to="/pesquisar">
           Pesquisar
         </Link>
-        <Link to="/myflix">Favoritos</Link>
+        <Link to="/Favoritos">Favoritos</Link>
       </nav>
       {logado ? <Link onClick={() => sair()}>Sair</Link> : ""}
     </header>

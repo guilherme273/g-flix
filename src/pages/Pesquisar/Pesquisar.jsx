@@ -4,6 +4,9 @@ import Header from "../MyFlix/components/header/Header";
 import ContainerSearch from "../MyFlix/components/ContainerSearch/ContainerSearch";
 import { useState } from "react";
 import { useMovies } from "../../contexts/allMovies";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+
 
 function Pesquisar() {
   const { allMovies, setMovies } = useMovies();
@@ -24,6 +27,7 @@ function Pesquisar() {
         setMovies={setMovies}
       />
       <Footer />
+      <ToastContainer />
     </div>
   );
 }

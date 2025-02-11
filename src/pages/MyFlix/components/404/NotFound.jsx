@@ -9,7 +9,7 @@ function NotFound() {
       <div className="container-not-found">
         <h1>Ops, conteúdo não localizado</h1>
         <div className="imagem-not-found">
-          <img src="/public/img/404.png" alt="" />
+          <img src="/img/404.png" alt="" />
         </div>
       </div>
       <br />

@@ -14,6 +14,7 @@ import { Authenticator } from "./contexts/login.jsx";
 import { PrivateRoute } from "./PrivateRoutes.jsx";
 import { Likes } from "./contexts/likes.jsx";
 import { Movies } from "./contexts/allMovies.jsx";
+import Favoritos from "./pages/favoritos/favoritos.jsx";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,16 @@ const router = createBrowserRouter([
     element: <NotFound />,
   },
 
+  {
+    path: "/favoritos",
+    element: <PrivateRoute />,
+    children: [
+      {
+        path: "",
+        element: <Favoritos />,
+      },
+    ],
+  },
   {
     path: "/assistir",
     element: <PrivateRoute />,
@@ -60,6 +71,7 @@ const router = createBrowserRouter([
     path: "/Register",
     element: <Register />,
   },
+
 ]);
 
 createRoot(document.getElementById("root")).render(

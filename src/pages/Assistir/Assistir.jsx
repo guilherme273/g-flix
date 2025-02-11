@@ -4,6 +4,9 @@ import Footer from "../MyFlix/components/footer/Footer";
 import Header from "../MyFlix/components/header/Header";
 import DivCards from "../MyFlix/components/divCard/DivCards";
 import { useMovies } from "../../contexts/allMovies";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+
 
 function Assistir() {
   const location = useLocation();
@@ -17,6 +20,7 @@ function Assistir() {
       <ContainerAssistir movieId={movieId} />
       <DivCards title={category} movies={allMovies} allMovies={allMovies} />;
       <Footer />
+      <ToastContainer />
     </div>
   );
 }
