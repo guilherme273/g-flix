@@ -63,7 +63,7 @@ function SectionFavoritos() {
                 <img
                   onClick={() => disdeuLike(movie.id)}
                   className="icon"
-                  src="/public/img/coracao-preenchido.png"
+                  src="/img/coracao-preenchido.png"
                 />
               ) : (
                 <Heart
