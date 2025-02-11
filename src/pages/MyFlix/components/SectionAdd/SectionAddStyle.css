@@ -35,7 +35,21 @@ color: aliceblue;
    justify-content: center;
    align-items: center;
 }
-.section-add .formulario form input{
+.section-add .formulario form .div-url{
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.section-add .formulario form .div-url .p-alert{
+color: rgba(255, 0, 0, 0.541);
+font-size: 15px;
+text-align: start;
+font-size: smaller;
+width: 95%;
+}
+.section-add .formulario form .div-url input{
 outline: none;
  background-color: transparent;
  border: solid 0.1px rgba(255, 0, 0, 0.384);
@@ -46,7 +60,7 @@ outline: none;
  font-size: 15px;
 }
 /* Remove o estilo padrão do select */
-.section-add .formulario form select {
+.section-add .formulario form .div-url select {
    appearance: none; /* Remove o estilo padrão */
    -webkit-appearance: none;
    -moz-appearance: none;
@@ -68,20 +82,20 @@ outline: none;
  }
  
  /* Efeito ao focar */
- .section-add .formulario form select:focus {
+ .section-add .formulario form .div-url select:focus {
 
    outline: none;
  }
  
  /* Estilizando opções (Funciona melhor no Firefox) */
- .section-add .formulario form select option {
+ .section-add .formulario form .div-url select option {
    background-color:rgba(46, 46, 46, 0.856);;
    padding: 10px;
    color: aliceblue;
  }
  
  /* Não funciona no Chrome/Safari, mas pode melhorar a legibilidade */
- .section-add .formulario form select option:hover {
+ .section-add .formulario form .div-url select option:hover {
    background-color: rgba(255, 0, 0, 0.3);
    color: white;
  }

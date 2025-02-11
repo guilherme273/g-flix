@@ -2,11 +2,11 @@ import DivCards from "../divCard/DivCards";
 import "./ContainerStyle.css";
 
 export const categoryes = [
-  "Geografia",
-  "Como fazer e usar",
-  "Astronomia e Geografia",
-  "Climatologia, Meteorologia, Vegetação",
-  "Geologia e Hidrografia",
+  "Programação",
+  "Inteligencia Artificial",
+  "Filmes do Youtube",
+  "Interessantes",
+  "Outros",
 ];
 
 function Container({ allMovies }) {
@@ -29,5 +29,6 @@ function Container({ allMovies }) {
     </section>
   );
 }
+
 
 export default Container;

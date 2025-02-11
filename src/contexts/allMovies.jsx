@@ -5,31 +5,57 @@ const allMoviesContext = createContext();
 export const Movies = ({ children }) => {
   const [allMovies, setAllMovies] = useState([]);
 
-  useEffect(() => {
-    const getMovies = async () => {
-      try {
-        const response = await fetch(
-          "http://localhost:3000/get-all-movies",
-          {
-            method: "GET",
-          }
-        );
-        if (response.ok) {
-          const data = await response.json();
 
-          setAllMovies(data);
-        } else {
-          console.log("erro na busca ");
+  const atualizarMovies = async (data) => {
+    try {
+      const response = await fetch(
+        "https://mybackend.eco.br/add-movie",
+        {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: data,
         }
-      } catch (error) {
-        console.log(error);
+      );
+      if (response.ok) {
+      getMovies();
+        return true;
+      } else {
+        console.log("erro na busca");
+        return false
       }
-    };
+    } catch (error) {
+      console.log(error);
+    }
+
+  }
+  const getMovies = async () => {
+    try {
+      const response = await fetch(
+        "https://mybackend.eco.br/get-all-movies",
+        {
+          method: "GET",
+        }
+      );
+      if (response.ok) {
+        const data = await response.json();
+
+        setAllMovies(data);
+      } else {
+        console.log("erro na busca ");
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    
     getMovies();
   }, []);
 
   return (
-    <allMoviesContext.Provider value={{ allMovies, setAllMovies }}>
+    <allMoviesContext.Provider value={{ allMovies, setAllMovies, atualizarMovies }}>
       {children}
     </allMoviesContext.Provider>
   );
