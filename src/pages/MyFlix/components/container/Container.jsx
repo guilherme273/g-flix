@@ -1,7 +1,7 @@
 import DivCards from "../divCard/DivCards";
 import "./ContainerStyle.css";
 
-const categoryes = [
+export const categoryes = [
   "Geografia",
   "Como fazer e usar",
   "Astronomia e Geografia",

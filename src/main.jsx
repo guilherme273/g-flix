@@ -15,6 +15,7 @@ import { PrivateRoute } from "./PrivateRoutes.jsx";
 import { Likes } from "./contexts/likes.jsx";
 import { Movies } from "./contexts/allMovies.jsx";
 import Favoritos from "./pages/favoritos/favoritos.jsx";
+import AddVideos from "./pages/addVideos/AddVideos.jsx";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,16 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Favoritos />,
+      },
+    ],
+  },
+  {
+    path: "/add-videos",
+    element: <PrivateRoute />,
+    children: [
+      {
+        path: "",
+        element: <AddVideos />,
       },
     ],
   },

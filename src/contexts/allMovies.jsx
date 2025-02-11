@@ -9,7 +9,7 @@ export const Movies = ({ children }) => {
     const getMovies = async () => {
       try {
         const response = await fetch(
-          "https://mybackend.eco.br/get-all-movies",
+          "http://localhost:3000/get-all-movies",
           {
             method: "GET",
           }

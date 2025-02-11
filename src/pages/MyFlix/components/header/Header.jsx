@@ -20,6 +20,7 @@ function Header({ allMovies }) {
           Pesquisar
         </Link>
         <Link to="/Favoritos">Favoritos</Link>
+        {/* <Link to="/add-videos">Adicionar video</Link> */}
       </nav>
       {logado ? <Link onClick={() => sair()}>Sair</Link> : ""}
     </header>
