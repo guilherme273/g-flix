@@ -68,9 +68,10 @@ function SectionAdd()
             const json = JSON.stringify(obj);
             const atualizou = await atualizarMovies(json);
 
-            if(atualizou)
+            if(atualizou.success)
             {
-                toast('Video adicionado com sucesso!', {
+
+                toast(`${atualizou.msg}`, {
                     autoClose: 5000, // Duração do toast (5 segundos)
                     hideProgressBar: true, // Mostrar barra de progresso
                     closeButton: true, // Mostrar botão de fechar
@@ -83,7 +84,8 @@ function SectionAdd()
                   });
                   reset();
             }else {
-                toast('Ocorreu um erro na requisição, verifique a url informada!', {
+
+                toast(`${atualizou.msg}`, {
                     autoClose: 5000, 
                     hideProgressBar: true, 
                     closeButton: true,

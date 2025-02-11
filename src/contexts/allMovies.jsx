@@ -20,10 +20,10 @@ export const Movies = ({ children }) => {
       );
       if (response.ok) {
       getMovies();
-        return true;
+        return await response.json();
       } else {
-        console.log("erro na busca");
-        return false
+       
+        return await response.json();
       }
     } catch (error) {
       console.log(error);
