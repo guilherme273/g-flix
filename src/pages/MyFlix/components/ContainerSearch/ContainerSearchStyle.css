@@ -22,6 +22,32 @@
   min-height: 400px;
   height: auto;
 }
+.container-search .todos-os-videos .card-movie {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  min-height: 325px;
+  padding: 3px 3px 30px 3px;
+  background-color: rgba(0, 0, 0, 0.575);
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+
+}
+.container-search .todos-os-videos .card-movie .info-movie {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+}
+.container-search .todos-os-videos .card-movie  .info-movie p {
+    margin-left: 3px;
+    text-align: start;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: rgba(240, 248, 255, 0.76);
+    padding: 5px;
+
+}
 .container-search .todos-os-videos .div-icon-and-link-img {
   display: flex;
   flex-direction: column;
@@ -55,13 +81,10 @@
   margin: 0.5rem;
   transition: transform 0.3s ease;
 }
-.container-search
-  .todos-os-videos
-  .div-icon-and-link-img
-  .image-container
-  img:hover {
-  transform: scale(1.1);
-}
+
+
+
+
 
 @media (max-width: 412px) {
   .container-search {

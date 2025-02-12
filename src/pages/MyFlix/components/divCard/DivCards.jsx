@@ -44,32 +44,38 @@ function DivCards({ movies, title = "" }) {
           const laicado = likes.some((like) => like.id_movie === movie.id);
 
           return (
-            <div className="div-icon-and-link-img" key={movie.id}>
-              <Link
-                to={"/assistir"}
-                state={{
-                  listMovies: movies,
-                  movieId: movie.id,
-                  cat: movie.category,
-                }}
-                className="image-container"
-              >
-                <img src={movie.cover} alt="Capa" className="image" />
-              </Link>
+            <div key={movie.id} className="card-movie">
+              <div className="div-icon-and-link-img" >
+                <Link
+                  to={"/assistir"}
+                  state={{
+                    listMovies: movies,
+                    movieId: movie.id,
+                    cat: movie.category,
+                  }}
+                  className="image-container"
+                >
+                  <img src={movie.cover} alt="Capa" className="image" />
+                </Link>
 
-              {laicado ? (
-                <img
-                  onClick={() => disdeuLike(movie.id)}
-                  className="icon"
-                  src="/img/coracao-preenchido.png"
-                />
-              ) : (
-                <Heart
-                  onClick={() => deuLike(movie.id)}
-                  className="icon"
-                  size={38}
-                />
-              )}
+                {laicado ? (
+                  <img
+                    onClick={() => disdeuLike(movie.id)}
+                    className="icon"
+                    src="/img/coracao-preenchido.png"
+                  />
+                ) : (
+                  <Heart
+                    onClick={() => deuLike(movie.id)}
+                    className="icon"
+                    size={38}
+                  />
+                )}
+              
+              </div>
+              <div className="info-movie">
+                <p>{movie.title}</p>
+              </div>
             </div>
           );
         })}

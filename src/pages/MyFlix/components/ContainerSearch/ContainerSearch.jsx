@@ -20,7 +20,7 @@ function ContainerSearch({ allMovies, moviesSearch }) {
   return (
     <div className="container-search">
       {allMovies === moviesSearch ? (
-        <h1>{`Todos os videos (total de ${allMovies.length})`}</h1>
+        <h1>{`Todos os filmes (total de ${allMovies.length})`}</h1>
       ) : (
         <h1>{`${moviesSearch.length} Resultados Encontrados`}</h1>
       )}
@@ -29,32 +29,38 @@ function ContainerSearch({ allMovies, moviesSearch }) {
         {moviesSearch.map((movie) => {
           const laicado = likes.some((like) => like.id_movie === movie.id);
           return (
-            <div key={movie.id} className="div-icon-and-link-img">
-              <Link
-                to={"/assistir"}
-                state={{
-                  listMovies: moviesSearch,
-                  movieId: movie.id,
-                  allMovies: allMovies,
-                  cat: movie.category,
-                }}
-                className="image-container"
-              >
-                <img src={movie.cover} alt="Capa" className="image" />
-              </Link>
-              {laicado ? (
-                <img
-                  onClick={() => disdeuLike(movie.id)}
-                  className="icon"
-                  src="/img/coracao-preenchido.png"
-                />
-              ) : (
-                <Heart
-                  onClick={() => deuLike(movie.id)}
-                  className="icon"
-                  size={38}
-                />
-              )}
+
+            <div key={movie.id} className="card-movie">
+              <div  className="div-icon-and-link-img">
+                <Link
+                  to={"/assistir"}
+                  state={{
+                    listMovies: moviesSearch,
+                    movieId: movie.id,
+                    allMovies: allMovies,
+                    cat: movie.category,
+                  }}
+                  className="image-container"
+                >
+                  <img src={movie.cover} alt="Capa" className="image" />
+                </Link>
+                {laicado ? (
+                  <img
+                    onClick={() => disdeuLike(movie.id)}
+                    className="icon"
+                    src="/img/coracao-preenchido.png"
+                  />
+                ) : (
+                  <Heart
+                    onClick={() => deuLike(movie.id)}
+                    className="icon"
+                    size={38}
+                  />
+                )}
+              </div>
+              <div className="info-movie">
+                <p>{movie.title}</p>
+              </div>
             </div>
           );
         })}

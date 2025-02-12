@@ -46,32 +46,37 @@ function SectionFavoritos() {
         {filterMovies(allMovies).map((movie) => {
           const laicado = likes.some((like) => like.id_movie === movie.id);
           return (
-            <div key={movie.id} className="div-icon-and-link-img">
-              <Link
-                to={"/assistir"}
-                state={{
-                  listMovies: allMovies,
-                  movieId: movie.id,
-                  allMovies: allMovies,
-                  cat: movie.category,
-                }}
-                className="image-container"
-              >
-                <img src={movie.cover} alt="Capa" className="image" />
-              </Link>
-              {laicado ? (
-                <img
-                  onClick={() => disdeuLike(movie.id)}
-                  className="icon"
-                  src="/img/coracao-preenchido.png"
-                />
-              ) : (
-                <Heart
-                  onClick={() => deuLike(movie.id)}
-                  className="icon"
-                  size={38}
-                />
-              )}
+            <div key={movie.id} className="card-movie">
+                <div  className="div-icon-and-link-img">
+                  <Link
+                    to={"/assistir"}
+                    state={{
+                      listMovies: allMovies,
+                      movieId: movie.id,
+                      allMovies: allMovies,
+                      cat: movie.category,
+                    }}
+                    className="image-container"
+                  >
+                    <img src={movie.cover} alt="Capa" className="image" />
+                  </Link>
+                  {laicado ? (
+                    <img
+                      onClick={() => disdeuLike(movie.id)}
+                      className="icon"
+                      src="/img/coracao-preenchido.png"
+                    />
+                  ) : (
+                    <Heart
+                      onClick={() => deuLike(movie.id)}
+                      className="icon"
+                      size={38}
+                    />
+                  )}
+                </div>
+                <div className="info-movie">
+                  <p>{movie.title}</p>
+                </div>
             </div>
           );
         })}
