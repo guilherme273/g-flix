@@ -39,7 +39,8 @@ function SectionAdd()
 
         const result = await response.json();
         if(response.ok){
-            const imageUrl = result.items[0]?.snippet?.thumbnails?.maxres?.url;
+            console.log(result);
+            const imageUrl = result.items[0]?.snippet?.thumbnails?.medium?.url;
             const title = result.items[0]?.snippet?.title;
             console.log(imageUrl);
         

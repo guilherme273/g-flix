@@ -21,6 +21,13 @@ function DivCards({ movies, title = "" }) {
     await unMakeLike(movie_id, userOBJ.id);
   };
 
+  const filterMovies = (movies) =>{
+
+    const newArray = movies.filter((movie)=>  movie.category === title);
+    return newArray;
+
+  }
+
   const scrolLeft = (e) => {
     e.preventDefault();
     cards.current.scrollLeft -= cards.current.offsetWidth;
@@ -33,7 +40,7 @@ function DivCards({ movies, title = "" }) {
     <div className="div-card">
       <h2>{title}</h2>
       <div className="cards" ref={cards}>
-        {movies.map((movie) => {
+        {filterMovies(movies).map((movie) => {
           const laicado = likes.some((like) => like.id_movie === movie.id);
 
           return (

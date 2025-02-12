@@ -2,11 +2,12 @@ import DivCards from "../divCard/DivCards";
 import "./ContainerStyle.css";
 
 export const categoryes = [
-  "Programação",
-  "Inteligencia Artificial",
-  "Filmes do Youtube",
-  "Interessantes",
-  "Outros",
+"Ação",
+"Comédia",
+"Drama",
+"Infantil",
+"Romance",
+"Terror"
 ];
 
 function Container({ allMovies }) {
