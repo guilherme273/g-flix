@@ -10,6 +10,7 @@
   padding: 0px;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .icon {
   color: red;
@@ -91,6 +92,11 @@
   border: 1px solid red;
 }
 
+.div-register .login{
+display: flex;
+position: absolute;
+bottom: 0;
+}
 .div-register .login p {
   color: aliceblue;
   font-size: 14px;
