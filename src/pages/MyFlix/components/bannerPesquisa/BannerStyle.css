@@ -17,6 +17,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 100%;
   transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
@@ -34,8 +35,7 @@
   background-color: transparent;
   border-radius: 20px;
   color: aliceblue;
-  height: 3rem;
-  width: 30rem;
+  width: 40%;
   font-size: 20px;
   padding: 0.7rem;
   border: 1px solid aliceblue;
@@ -62,98 +62,18 @@
   cursor: pointer;
 }
 
-@media (max-width: 412px) {
-  .section-banner .div-input-pesquisa {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0.1rem;
-    z-index: 1;
-    padding: 0;
-    margin: 0;
-  }
-  .section-banner .div-input-pesquisa .g {
-    font-size: 25px;
-    font-weight: bold;
-    color: red;
-  }
-
+@media (min-width: 380px) and (max-width: 1010px) {
   .section-banner .div-input-pesquisa .input-pesquisa {
-    background-color: transparent;
-    border-radius: 20px;
-    color: aliceblue;
-    height: 3rem;
-    width: 24rem;
-    font-size: 20px;
-
-    padding: 0.7rem;
-    border: 1px solid aliceblue;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: aliceblue;
-  }
-  .section-banner .input-pesquisa:focus {
-    border: 1px solid aliceblue;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: aliceblue;
-    box-shadow: none;
-    outline: none;
-  }
-
-  .banner-img.active {
-    opacity: 1;
+    width: 70%;
   }
 }
-
-@media (max-width: 344px) {
-  .section-banner .div-input-pesquisa {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0.1rem;
-    z-index: 1;
-    padding: 0;
-    margin: 0;
-  }
-  .section-banner .div-input-pesquisa .g {
-    font-size: 25px;
-    font-weight: bold;
-    color: red;
-  }
-
+@media (min-width: 1px) and (max-width: 380px) {
   .section-banner .div-input-pesquisa .input-pesquisa {
-    background-color: transparent;
-    border-radius: 20px;
-    color: aliceblue;
-    height: 3rem;
-    width: 15rem;
-    font-size: 20px;
-
-    padding: 0.7rem;
-    border: 1px solid aliceblue;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: aliceblue;
+    width: 65%;
   }
-  .section-banner .input-pesquisa:focus {
-    border: 1px solid aliceblue;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: aliceblue;
-    box-shadow: none;
-    outline: none;
-  }
-
-  .banner-img.active {
-    opacity: 1;
+}
+@media (min-width: 1px) and (max-width: 615px) {
+  .section-banner .div-input-pesquisa .input-pesquisa {
+    width: 70%;
   }
 }
