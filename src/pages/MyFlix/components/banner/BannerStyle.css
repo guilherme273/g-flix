@@ -26,7 +26,7 @@
   opacity: 1;
 }
 
-@media (min-width: 1px) and (max-width: 991px) {
+@media (min-width: 1px) and (max-width: 1011px) {
   .section-banner {
     margin-top: 0;
   }
