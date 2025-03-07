@@ -48,5 +48,6 @@
     padding: 1rem;
     border-top: solid 2px red;
     color: aliceblue;
+    text-align: center;
   }
 }

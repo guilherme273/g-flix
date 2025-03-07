@@ -117,3 +117,12 @@
     width: 98%;
   }
 }
+@media (min-width: 1px) and (max-width: 700px) {
+  .section-add .formulario {
+    width: 98%;
+  }
+
+  .section-add .formulario form button {
+    width: 95%;
+  }
+}
