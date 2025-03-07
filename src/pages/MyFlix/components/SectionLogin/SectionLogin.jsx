@@ -4,23 +4,27 @@ import { Link, Navigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { useAuthenticator } from "../../../../contexts/login";
 
-import {useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function SectionLogin() {
-
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-
-  const { logar, logado, isSuccess, setisSuccess, setisSuccessType, isSuccessType } = useAuthenticator();
+  const {
+    logar,
+    logado,
+    isSuccess,
+    setisSuccess,
+    setisSuccessType,
+    isSuccessType,
+  } = useAuthenticator();
   const [error, setError] = useState(null);
-
 
   const makeRequest = async (data) => {
     const msg = await logar(data);
@@ -40,25 +44,21 @@ function SectionLogin() {
     }
   };
 
-useEffect(()=>{
-
-if(isSuccess && isSuccessType ==='cadastrado')
-{
-  toast('cadastro realizado com sucesso', {
-    autoClose: 5000, // Duração do toast (5 segundos)
-    hideProgressBar: true, // Mostrar barra de progresso
-    closeButton: true, // Mostrar botão de fechar
-    pauseOnHover: true, // Pausar o tempo quando o mouse estiver sobre o toast
-    style: {
-      backgroundColor: "#28a745", // Cor de fundo verde 
-      color: "white", // Cor do texto
-      fontWeight: "bold", // Texto em negrito
-    },
-  });
-}
-
-},isSuccess)
-
+  useEffect(() => {
+    if (isSuccess && isSuccessType === "cadastrado") {
+      toast("cadastro realizado com sucesso", {
+        autoClose: 5000, // Duração do toast (5 segundos)
+        hideProgressBar: true, // Mostrar barra de progresso
+        closeButton: true, // Mostrar botão de fechar
+        pauseOnHover: true, // Pausar o tempo quando o mouse estiver sobre o toast
+        style: {
+          backgroundColor: "#28a745", // Cor de fundo verde
+          color: "white", // Cor do texto
+          fontWeight: "bold", // Texto em negrito
+        },
+      });
+    }
+  }, isSuccess);
 
   if (logado) {
     return <Navigate to="/" />;
@@ -77,7 +77,7 @@ if(isSuccess && isSuccessType ==='cadastrado')
               size={130}
               strokeWidth={0.5}
             />
-            <div>
+            <div className="w-100">
               <div className="div-input-login">
                 <AtSign className={"key"} size={35} strokeWidth={0.5} />
                 <input
@@ -91,7 +91,7 @@ if(isSuccess && isSuccessType ==='cadastrado')
               )}
             </div>
 
-            <div>
+            <div className="w-100">
               <div className="div-input-senha">
                 <LockKeyhole className="locke" size={35} strokeWidth={0.5} />
                 <input
@@ -116,7 +116,6 @@ if(isSuccess && isSuccessType ==='cadastrado')
             </p>
           </div>
         </div>
-     
       </>
     );
   }

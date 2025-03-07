@@ -8,7 +8,6 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useAuthenticator } from "../../../../contexts/login";
 
-
 function SectionRegister() {
   const {
     register,
@@ -19,10 +18,7 @@ function SectionRegister() {
   } = useForm();
 
   const [cadastrado, setcadastrado] = useState(false);
-  const {isSuccess, setisSuccess, setisSuccessType} = useAuthenticator();
-
-
-
+  const { isSuccess, setisSuccess, setisSuccessType } = useAuthenticator();
 
   const makeRequest = async (data) => {
     const json = JSON.stringify(data);
@@ -36,9 +32,9 @@ function SectionRegister() {
     });
 
     if (response.ok) {
-      setisSuccess(true)
-      setisSuccessType('cadastrado')
-      setcadastrado(true)
+      setisSuccess(true);
+      setisSuccessType("cadastrado");
+      setcadastrado(true);
       reset();
     } else {
       const errorData = await response.json();
@@ -58,7 +54,7 @@ function SectionRegister() {
   };
   const matchPassword = watch("password");
   if (cadastrado) {
-    return <Navigate to="/login"  />;
+    return <Navigate to="/login" />;
   } else {
     return (
       <>
@@ -157,8 +153,6 @@ function SectionRegister() {
             </div>
           </form>
         </div>
-  
-        
       </>
     );
   }

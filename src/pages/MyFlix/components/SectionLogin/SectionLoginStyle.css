@@ -8,7 +8,7 @@
   flex-direction: column;
   text-align: center;
   padding: 0px;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 0.6rem;
 }
@@ -23,9 +23,7 @@
 }
 
 .div-login .formulario-login {
-  width: 70%;
-  height: 70%;
-  padding: 0rem 1rem 1rem 1rem;
+  width: 100%;
   border-radius: 20px;
   margin-top: 0;
   padding-top: 0;
@@ -38,7 +36,7 @@
   color: red;
   text-align: left;
   margin-left: 45px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .div-login .formulario-login .div-input-login {
@@ -46,7 +44,9 @@
   flex-direction: row;
   margin-right: 5%;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
+  width: 70%;
 }
 .div-login .formulario-login .div-input-login .key {
   color: red;
@@ -60,14 +60,15 @@
   flex-direction: row;
   margin-right: 5%;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
+  width: 70%;
 }
 .div-login .formulario-login input {
   background: transparent;
   outline: none;
-  width: 300px;
+  width: 70%;
   border-radius: 20px;
-  height: 40px;
   color: aliceblue;
   border: 1px solid red;
   padding: 10px;
@@ -77,7 +78,7 @@
   outline: none;
   border-radius: 5px;
   width: 50%;
-  height: 40px;
+  padding: 7px;
   color: aliceblue;
   border: 1px solid red;
   margin-top: 1rem;
@@ -87,21 +88,116 @@
   background: rgba(255, 16, 16, 0.5);
   outline: none;
   border-radius: 5px;
-  height: 40px;
   color: aliceblue;
   border: 1px solid red;
 }
 
 .div-login .register {
   padding-bottom: 10px;
+  display: flex;
 }
 .div-login .register p {
   color: aliceblue;
   font-size: 14px;
   margin-right: 5px;
+  flex-wrap: wrap;
 }
 .div-login .register .p .a-no-p {
   font-size: 14px;
   margin-left: 5px;
   color: rgb(0, 119, 255);
+}
+.div-login .register .p .a-no-p:hover {
+  color: rgb(49, 143, 252);
+}
+
+.w-100 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 389px) and (max-width: 900px) {
+  .div-login {
+    width: 60%;
+    height: 50%;
+    background-color: rgba(25, 25, 25, 0.9);
+    border: 1px solid red;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.6rem;
+  }
+}
+@media (min-width: 500px) and (max-width: 700px) {
+  .div-login {
+    width: 70%;
+    height: 50%;
+    background-color: rgba(25, 25, 25, 0.9);
+    border: 1px solid red;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.6rem;
+  }
+}
+@media (min-width: 380px) and (max-width: 500px) {
+  .div-login {
+    width: 90%;
+    height: 50%;
+    background-color: rgba(25, 25, 25, 0.9);
+    border: 1px solid red;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .div-login .formulario-login input {
+    background: transparent;
+    outline: none;
+    width: 90%;
+    border-radius: 20px;
+    color: aliceblue;
+    border: 1px solid red;
+    padding: 10px;
+  }
+}
+@media (min-width: 1px) and (max-width: 380px) {
+  .div-login {
+    width: 98%;
+    height: 50%;
+    background-color: rgba(25, 25, 25, 0.9);
+    border: 1px solid red;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .div-login .formulario-login input {
+    background: transparent;
+    outline: none;
+    width: 90%;
+    border-radius: 20px;
+    color: aliceblue;
+    border: 1px solid red;
+    padding: 10px;
+  }
 }
