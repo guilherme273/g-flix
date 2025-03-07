@@ -11,6 +11,7 @@ function Header({ allMovies }) {
   };
 
   const [showMObileHeader, setShowMObileHeader] = useState(false);
+  console.log(showMObileHeader);
   return (
     <>
       <button
@@ -19,7 +20,7 @@ function Header({ allMovies }) {
       >
         <AlignJustify className="icon-mobile-button" size={30} />
       </button>
-      <header className={showMObileHeader ? "header" : "header-mobile"}>
+      <header className={!showMObileHeader ? "header" : "header-mobile"}>
         <Link to="/" className="link-logo">
           <span className="g">G Flix</span>
         </Link>
