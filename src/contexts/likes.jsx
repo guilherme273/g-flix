@@ -7,7 +7,7 @@ const LikesContext = createContext();
 
 export const Likes = ({ children }) => {
   const [likes, setLikes] = useState([]);
-  const { getUser, setisSuccessType, setisSuccess } = useAuthenticator();
+  const { getUser, setisSuccessType, setisSuccess, User } = useAuthenticator();
   const takeLikes = async (id_user) => {
     const response = await fetch(
       `https://mybackend.eco.br/like?iduser=${id_user}`,
@@ -30,7 +30,8 @@ export const Likes = ({ children }) => {
       setLikes(arrayLikes);
     };
     x();
-  }, []);
+    console.log("mudou usuario");
+  }, [User]);
 
   const makeLike = async (id_movie, id_user) => {
     const jsonOBJ = {
@@ -52,13 +53,13 @@ export const Likes = ({ children }) => {
     }
     const newLikes = await takeLikes(id_user);
     setLikes(newLikes);
-    toast('Video adicionado a lista de favoritos!', {
+    toast("Video adicionado a lista de favoritos!", {
       autoClose: 5000, // Duração do toast (5 segundos)
       hideProgressBar: true, // Mostrar barra de progresso
       closeButton: true, // Mostrar botão de fechar
       pauseOnHover: true, // Pausar o tempo quando o mouse estiver sobre o toast
       style: {
-        backgroundColor: "#28a745", // Cor de fundo verde 
+        backgroundColor: "#28a745", // Cor de fundo verde
         color: "white", // Cor do texto
         fontWeight: "bold", // Texto em negrito
       },
@@ -83,20 +84,22 @@ export const Likes = ({ children }) => {
     }
     const newLikes = await takeLikes(id_user);
     setLikes(newLikes);
-    toast('Video removido da lista de favoritos!', {
+    toast("Video removido da lista de favoritos!", {
       autoClose: 5000, // Duração do toast (5 segundos)
       hideProgressBar: true, // Mostrar barra de progresso
       closeButton: true, // Mostrar botão de fechar
       pauseOnHover: true, // Pausar o tempo quando o mouse estiver sobre o toast
       style: {
-        backgroundColor: "#28a745", // Cor de fundo verde 
+        backgroundColor: "#28a745", // Cor de fundo verde
         color: "white", // Cor do texto
         fontWeight: "bold", // Texto em negrito
       },
     });
   };
   return (
-    <LikesContext.Provider value={{ unMakeLike, makeLike, takeLikes, likes }}>
+    <LikesContext.Provider
+      value={{ unMakeLike, makeLike, takeLikes, likes, setLikes }}
+    >
       {children}
     </LikesContext.Provider>
   );

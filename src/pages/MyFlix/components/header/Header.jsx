@@ -11,7 +11,7 @@ function Header({ allMovies }) {
   };
 
   const [showMObileHeader, setShowMObileHeader] = useState(false);
-  console.log(showMObileHeader);
+
   return (
     <>
       <button
