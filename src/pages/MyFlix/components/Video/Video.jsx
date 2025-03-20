@@ -3,8 +3,6 @@ function Video({ movieId }) {
   return (
     <div className="div-video">
       <iframe
-        width="1000"
-        height="500"
         src={`https://www.youtube.com/embed/${movieId}`}
         title="YouTube video player"
         frameBorder="0"

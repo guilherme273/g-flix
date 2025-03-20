@@ -1,6 +1,17 @@
-.container-video .div-video {
-  padding: 0;
+.div-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Proporção 16:9 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: -15%;
 }
-.container-video .div-video iframe {
-  border-radius: 20px;
+
+.div-video iframe {
+  position: absolute;
+  top: 0;
+  width: 95%;
+  height: 70%;
 }

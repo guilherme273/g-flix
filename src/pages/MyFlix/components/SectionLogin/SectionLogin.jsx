@@ -20,8 +20,7 @@ function SectionLogin() {
     logar,
     logado,
     isSuccess,
-    setisSuccess,
-    setisSuccessType,
+
     isSuccessType,
   } = useAuthenticator();
   const [error, setError] = useState(null);
